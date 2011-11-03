@@ -1,3 +1,9 @@
+# revision 18146
+# category Package
+# catalog-ctan /macros/latex/contrib/gene/fundus
+# catalog-date 2008-09-12 11:49:08 +0200
+# catalog-license other-free
+# catalog-version undef
 Name:		texlive-fundus
 Version:	20080912
 Release:	1
@@ -80,6 +86,7 @@ are now officially supported by LaTeX, as the OT2 encoding.
 %doc %{_texmfdistdir}/source/latex/fundus/twcal.ins
 %doc %{_texmfdistdir}/source/latex/fundus/va.dtx
 %doc %{_texmfdistdir}/source/latex/fundus/va.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -90,3 +97,5 @@ are now officially supported by LaTeX, as the OT2 encoding.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
