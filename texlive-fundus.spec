@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 Fonts supported are Peter Vanroose's calligra and handwriting
@@ -31,20 +28,12 @@ handwriting fonts, the twcal calligraphic fonts, and the va
 handwriting fonts. Note that the Washington University fonts
 are now officially supported by LaTeX, as the OT2 encoding.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -87,7 +76,6 @@ are now officially supported by LaTeX, as the OT2 encoding.
 %doc %{_texmfdistdir}/source/latex/fundus/twcal.ins
 %doc %{_texmfdistdir}/source/latex/fundus/va.dtx
 %doc %{_texmfdistdir}/source/latex/fundus/va.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -98,5 +86,3 @@ are now officially supported by LaTeX, as the OT2 encoding.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
