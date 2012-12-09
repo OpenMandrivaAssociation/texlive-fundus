@@ -86,3 +86,17 @@ are now officially supported by LaTeX, as the OT2 encoding.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20080912-2
++ Revision: 752177
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20080912-1
++ Revision: 718515
+- texlive-fundus
+- texlive-fundus
+- texlive-fundus
+- texlive-fundus
+
