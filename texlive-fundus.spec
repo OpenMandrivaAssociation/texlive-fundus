@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-fundus
 Version:	20080912
-Release:	8
+Release:	9
 Summary:	Providing LaTeX access to various font families
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gene/fundus
