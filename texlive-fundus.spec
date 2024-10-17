@@ -9,7 +9,7 @@ Version:	20080912
 Release:	12
 Summary:	Providing LaTeX access to various font families
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gene/fundus
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/gene/fundus
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fundus.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fundus.doc.tar.xz
